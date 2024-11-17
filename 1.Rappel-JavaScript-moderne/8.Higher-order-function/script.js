@@ -1,46 +1,53 @@
-/* 
+/*
     1. Fonction d'ordre supérieur.
 
-    Les fonctions d'ordre supérieur sont des fonctions qui vont soit recevoir une fonction callback en argument soit retourner une fonction, ou les deux à la fois !
+    Les fonctions d'ordre supérieur sont des fonctions qui vont soit recevoir
+    une fonction callback en argument soit retourner une fonction, ou les deux à la fois !
 
     Cela ouvre la voie à de nombreuses solutions et à une plus grande fléxibilité.
 */
 
+function customFilter(arr, callback) {
+  const filteredArray = [];
 
-const salaries = [1200,5000,4000,2500,3450,1800]
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      filteredArray.push(arr[i]);
+    }
+  }
+  return filteredArray;
+}
 
+const salaries = [1200, 5000, 4000, 2500, 3450, 1800];
 
-
-
-
-
-
-
-
-
-
-
+console.log(customFilter(salaries, (salary) => salary > 3000));
+console.log(customFilter(salaries, (salary) => salary >= 5000));
+console.log(customFilter(salaries, (salary) => salary < 1000));
+console.log(customFilter(salaries, (salary) => salary > 2000));
 
 const countries = [
   {
-      name: "Japan",
-      gdp: 4941
+    name: "Japan",
+    gdp: 4941,
   },
   {
-      name: "Germany",
-      gdp: 4260
+    name: "Germany",
+    gdp: 4260,
   },
   {
-      name: "South Korea",
-      gdp: 1811
+    name: "South Korea",
+    gdp: 1811,
   },
   {
-      name: "India",
-      gdp: 3176
+    name: "India",
+    gdp: 3176,
   },
   {
-      name: "Canada",
-      gdp: 1988
+    name: "Canada",
+    gdp: 1988,
   },
-]
+];
 
+console.log(customFilter(countries, (country) => country.gdp >= 2000));
+console.log(customFilter(countries, (country) => country.gdp < 3000));
+console.log(customFilter(countries, (country) => country.gdp >= 1000));
