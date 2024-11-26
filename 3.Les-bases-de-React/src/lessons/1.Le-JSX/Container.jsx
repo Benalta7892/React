@@ -3,15 +3,12 @@ import React from "react";
 function Container() {
   return (
     <div>
-      <p></p>
-      <ul className="list">
-        <li className="item"></li>
-        <li className="item"></li>
-        <li className="item"></li>
-        <li className="item"></li>
-        <li className="item"></li>
-        <li className="item"></li>
-      </ul>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
     </div>
   );
 }
