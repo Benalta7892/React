@@ -1,4 +1,4 @@
-import Container from "./lessons/9.Rendu-conditionnel-if/Container";
+import Container from "./lessons/10.Operateur-ternaire/Container";
 
 function App() {
   return (
