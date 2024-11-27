@@ -1,4 +1,4 @@
-import Container from "./lessons/6.Utiliser-du-CSS/Container";
+import Container from "./lessons/7.Creer-une-liste/Container";
 
 function App() {
   return (
