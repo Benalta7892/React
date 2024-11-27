@@ -10,7 +10,7 @@ export default function Container() {
     <div>
       <h1>Les props</h1>
       {/* {Card({id: id})}  */} {/* Appel de la fonction, C'est la meme chose que la ligne suivante */}
-      <Card id={id} state={state} />
+      <Card id={id} state={state} changeState={setState} />
       <p>State du container : {state}</p>
     </div>
   );

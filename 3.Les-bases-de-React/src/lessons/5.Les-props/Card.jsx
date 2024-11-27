@@ -1,11 +1,12 @@
-export default function Card(props) {
-  console.log(props);
+export default function Card({ id, state, changeState }) {
+  console.log(id, state);
 
   return (
     <div>
       <p>Voici la carte</p>
-      <p>User : {props.id}</p>
-      <p>State du parent : {props.state}</p>
+      <p>User : {id}</p>
+      <p>State du parent : {state}</p>
+      <button onClick={() => changeState("Olaaaaa")}>Changer le state</button>
     </div>
   );
 }
