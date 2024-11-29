@@ -1,4 +1,4 @@
-import Container from "./lessons/2.La-regle-des-hooks/Container";
+import Container from "./lessons/3.Le-hook-use-effect/Container";
 
 function App() {
   return (
