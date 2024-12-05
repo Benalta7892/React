@@ -6,9 +6,14 @@ export default function Container() {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      observer.observe(newsletterRef.current);
       console.log(entries);
+      if (entries[0].isIntersecting) {
+        newsletterRef.current.classList.add("active");
+        observer.unobserve(newsletterRef.current);
+      }
     });
+
+    observer.observe(newsletterRef.current);
 
     return () => {
       observer.unobserve(newsletterRef.current);
