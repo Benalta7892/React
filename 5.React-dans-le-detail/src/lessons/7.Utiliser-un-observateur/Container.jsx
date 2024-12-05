@@ -4,6 +4,17 @@ import { useEffect, useRef } from "react";
 export default function Container() {
   const newsletterRef = useRef();
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      observer.observe(newsletterRef.current);
+      console.log(entries);
+    });
+
+    return () => {
+      observer.unobserve(newsletterRef.current);
+    };
+  }, []);
+
   return (
     <div className="container">
       <h1>Utiliser un observateur</h1>
