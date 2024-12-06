@@ -7,7 +7,7 @@ export default function Calculation() {
     return degree ? degree * 1.8 + 32 : "Entrez une valeur";
   }
 
-  const expensiveCalculation = celsiusToFarenheit(temperature);
+  const expensiveCalculation = useMemo(() => celsiusToFarenheit(temperature), [temperature]);
   console.log("RENDER");
 
   return (
