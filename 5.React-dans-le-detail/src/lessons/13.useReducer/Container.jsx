@@ -22,8 +22,8 @@ export default function Container() {
       <h1>Valeur du compteur : {count}</h1>
       <button onClick={() => countDispatch({ type: "increment", payload: 5 })}>Incrémenter</button>
       <button onClick={() => countDispatch({ type: "decrement" })}>Décrémenter</button>
-      <button onClick={() => countDispatch({ type: "multiply" })}>Multiplier</button>
-      <button onClick={() => countDispatch({ type: "divide" })}>Diviser</button>
+      <button onClick={() => countDispatch({ type: "multiply" })}>Multiplier par 10</button>
+      <button onClick={() => countDispatch({ type: "divide" })}>Diviser par 10</button>
     </div>
   );
 }
