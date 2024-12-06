@@ -12,11 +12,21 @@ export default function DynamicRefSelection() {
     setFruits(fruits.filter((fruit) => fruit.id !== id));
   }
 
+  const fruitsRef = useRef([]);
+
+  function handleRefs(element) {
+    if (element) {
+      fruitsRef.current.push(element);
+    } else {
+      fruitsRef.current.shift();
+    }
+  }
+
   return (
     <div>
       <ul>
         {fruits.map((fruit) => (
-          <li key={fruit.id} onClick={() => deleteFruit(fruit.id)}>
+          <li key={fruit.id} onClick={() => deleteFruit(fruit.id)} ref={handleRefs}>
             {fruit.value}
           </li>
         ))}
