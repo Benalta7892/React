@@ -5,18 +5,13 @@ export default function Container() {
 
   useEffect(() => {
     const intervalID = setInterval(() => {
-      setCount(count + 1);
-      // console.log("hello");
+      setCount((state) => state + 1);
     }, 1000);
 
     return () => {
       clearInterval(intervalID);
     };
-  }, [count]);
-
-  // setInterval(() => {
-  //   setCount(count + 1);
-  // }, 1000);
+  }, []);
 
   return (
     <div>
