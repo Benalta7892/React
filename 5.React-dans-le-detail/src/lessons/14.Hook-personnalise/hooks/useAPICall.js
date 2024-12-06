@@ -6,7 +6,7 @@ export default function useAPICall() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.thecatapi.com/v1/images/search/ff")
+    fetch("https://api.thecatapi.com/v1/images/search")
       .then((res) => {
         if (!res.ok) {
           throw new Error();
