@@ -17,6 +17,7 @@ export default function useAPICall() {
         console.log(data);
         setCatData(data);
         setLoading(false);
+        setError(false);
       })
       .catch(() => setError(true));
   }, []);
