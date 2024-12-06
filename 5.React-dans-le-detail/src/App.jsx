@@ -2,7 +2,7 @@
 // Par exemple, une API peut permettre à une application de récupérer des données stockées sur un serveur distant.
 // Dans ce chapitre, nous allons apprendre à appeler une API à partir d'une application React.
 
-import Container from "./lessons/9.Selectionner-un-tableau-d'elements/Container";
+import Container from "./lessons/10.Comprendre-props-children/Container";
 
 function App() {
   return (
