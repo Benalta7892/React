@@ -1,6 +1,6 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+@tailwind base; /* reset css */
+@tailwind components; /* Pour des composant comme container ou d'autre que l'on veut ajouter*/
+@tailwind utilities; /* Toutes les classes de Tailwind */
 
 *,
 ::before,
