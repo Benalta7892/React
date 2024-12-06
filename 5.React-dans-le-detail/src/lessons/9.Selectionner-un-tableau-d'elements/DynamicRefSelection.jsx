@@ -21,6 +21,7 @@ export default function DynamicRefSelection() {
           </li>
         ))}
       </ul>
+      <button onClick={() => setFruits([...fruits, { id: nanoid(8), value: "🍍" }])}>Add Fruits</button>
     </div>
   );
 }
