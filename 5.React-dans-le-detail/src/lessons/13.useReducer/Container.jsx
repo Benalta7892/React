@@ -27,3 +27,4 @@ export default function Container() {
     </div>
   );
 }
+// Le payload est utilisé pour transmettre des données supplémentaires à l’action
