@@ -20,6 +20,7 @@ export default function DynamicRefSelection() {
     } else {
       fruitsRef.current.shift();
     }
+    console.log(fruitsRef);
   }
 
   return (
