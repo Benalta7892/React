@@ -6,9 +6,8 @@ export default function Container() {
   function addInputRef(el) {
     if (el && !inputsRef.current.includes(el)) {
       inputsRef.current.push(el);
-      console.log(`Ajout de l'élément :`, el); // Chaque élément ajouté
     }
-    console.log("État actuel de inputsRef:", [...inputsRef.current]); // État instantané
+    console.log(inputsRef);
   }
 
   return (
