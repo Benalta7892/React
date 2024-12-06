@@ -5,6 +5,7 @@ export default function Container() {
   const { catData, error, loading } = useAPICall();
 
   let content;
+
   if (loading && !error) {
     content = <img src={spinner} alt="icône de chargement" />;
   } else if (error) {
