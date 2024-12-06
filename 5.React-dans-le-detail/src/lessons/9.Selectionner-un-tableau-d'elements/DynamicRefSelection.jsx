@@ -3,12 +3,24 @@ import { nanoid } from "nanoid";
 
 export default function DynamicRefSelection() {
   const [fruits, setFruits] = useState([
-    { id: 1, value: "🍓" },
-    { id: 1, value: "🍉" },
-    { id: 1, value: "🍒" },
+    { id: nanoid(8), value: "🍓" },
+    { id: nanoid(8), value: "🍉" },
+    { id: nanoid(8), value: "🍒" },
   ]);
 
-  console.log(nanoid(8));
+  function deleteFruit(id) {
+    setFruits(fruits.filter((fruit) => fruit.id !== id));
+  }
 
-  return <div>DynamicRefSelection</div>;
+  return (
+    <div>
+      <ul>
+        {fruits.map((fruit) => (
+          <li key={fruit.id} onClick={() => deleteFruit(fruit.id)}>
+            {fruit.value}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
