@@ -8,4 +8,8 @@ const tabsData = [
   {
     txt: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi illo a quibusdam voluptatem praesentium repellendus ab reiciendis iusto! Quod hic aliquam, voluptates expedita iure eius corrupti incidunt quos unde doloremque earum, eligendi sequi, nam praesentium. Eius voluptates ullam est omnis similique tempora enim. Aut necessitatibus nesciunt et voluptatibus excepturi. Magni totam modi, similique atque recusandae blanditiis ut necessitatibus explicabo qui?",
   },
-]
+];
+
+export default function Tabs() {
+  return <div>Tabs</div>;
+}
