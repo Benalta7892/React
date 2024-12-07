@@ -10,6 +10,20 @@ const tabsData = [
   },
 ];
 
+import { useState } from "react";
+
 export default function Tabs() {
-  return <div>Tabs</div>;
+  const [selectedTab, setSelectedTab] = useState(1);
+
+  return (
+    <div className="max-w-xl min-h-[250px] mx-auto rounded border border-slate-400">
+      <div className="flex divide-x divide-slate-700">
+        {tabsData.map((obj, index) => (
+          <button key={index} className="w-full p-4 bg-slate-200 hover:bg-slate-300">
+            Tab {index + 1}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 }
