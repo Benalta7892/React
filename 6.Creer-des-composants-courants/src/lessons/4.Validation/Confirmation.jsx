@@ -12,6 +12,10 @@ export default function Confirmation({ inputsStates, setInputsStates, showValida
         value={inputsStates.passwordConfirmation}
         onChange={(e) => setInputsStates({ ...inputsStates, passwordConfirmation: e.target.value })}
       />
+
+      {showValidation.passwordConfirmation && (
+        <p className="text-red-400 font-semibold">Les mots de passe ne sont pas identiques.</p>
+      )}
     </>
   );
 }

@@ -51,7 +51,11 @@ export default function Validation() {
       setShowValidation((state) => ({ ...state, passwordConfirmation: false }));
     }
 
-    console.log(areValid);
+    if (Object.values(areValid).every((value) => value)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   return (
