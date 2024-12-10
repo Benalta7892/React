@@ -4,7 +4,7 @@ import Password from "./Password";
 import Confirmation from "./Confirmation";
 
 export default function Validation() {
-  const [inputsStates, setInputsState] = useState({
+  const [inputsStates, setInputsStates] = useState({
     pseudo: "",
     password: "",
     passwordConfirmation: "",
@@ -14,6 +14,7 @@ export default function Validation() {
     password: false,
     passwordConfirmation: false,
   });
+  console.log(inputsStates);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -22,9 +23,9 @@ export default function Validation() {
   return (
     <form onSubmit={handleSubmit} className="max-w-xl mx-auto border p-10 rounded">
       <p className="text-slate-100 text-xl mb-6">Créez votre npm d'utilisateur et votre mot de passe</p>
-      <Pseudo />
-      <Password />
-      <Confirmation />
+      <Pseudo inputsStates={inputsStates} setInputsStates={setInputsStates} showValidation={showValidation} />
+      <Password inputsStates={inputsStates} setInputsStates={setInputsStates} showValidation={showValidation} />
+      <Confirmation inputsStates={inputsStates} setInputsStates={setInputsStates} showValidation={showValidation} />
       <button className="mt-10 bg-slate-100 px-4 py-2 min-w-[125px] rounded">Valider</button>
     </form>
   );
