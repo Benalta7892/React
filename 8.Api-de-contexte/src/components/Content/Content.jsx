@@ -1,9 +1,13 @@
 import "./Content.css";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeProvider";
 
 export default function Content() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <div className="container">
-      <h1>Dark / Light app</h1>
+      <h1>You are in {darkMode ? "Dark" : "Light"} mode.</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. In praesentium dicta numquam sequi voluptatum nostrum,
         reprehenderit aspernatur? Ut, recusandae cumque iste amet aliquid, facilis adipisci eaque placeat officiis
