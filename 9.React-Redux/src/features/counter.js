@@ -13,6 +13,5 @@ export const counter = createSlice({
     },
   },
 });
-console.log(counter);
 export const { increment } = counter.actions;
 export default counter.reducer;
