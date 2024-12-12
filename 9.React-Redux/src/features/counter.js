@@ -11,7 +11,16 @@ export const counter = createSlice({
     increment: (state, action) => {
       state.value++;
     },
+    decrement: (state, action) => {
+      state.value--;
+    },
+    multiply: (state, action) => {
+      state.value = state.value * 10;
+    },
+    divide: (state, action) => {
+      state.value = state.value / 10;
+    },
   },
 });
-export const { increment } = counter.actions;
+export const { increment, decrement, multiply, divide } = counter.actions;
 export default counter.reducer;
