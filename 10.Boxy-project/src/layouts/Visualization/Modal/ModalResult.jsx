@@ -42,7 +42,7 @@ export default function ModalResult({ closeModal }) {
         </div>
 
         <p className="rounded bg-gray-100 p-5">
-          <span className="font-semibold">box-shadow : </span>
+          <span className="font-semibold text-sm">box-shadow : </span>
           <span>{getBoxShadowValue(shadowValues)}</span>
         </p>
       </div>
