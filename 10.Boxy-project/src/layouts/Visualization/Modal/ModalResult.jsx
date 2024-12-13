@@ -23,7 +23,7 @@ export default function ModalResult({ closeModal }) {
       }, 1250);
     }
 
-    navigator.clipboard.writeText(getBoxShadowValue(shadowValues));
+    navigator.clipboard.writeText(`box-shadow: ${getBoxShadowValue(shadowValues)}`);
   }
 
   return (
