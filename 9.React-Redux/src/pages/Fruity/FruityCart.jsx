@@ -16,7 +16,14 @@ export default function FruityCart() {
         ))}
         {fruityCart.cart.length === 0 && <li className="px-5 py-2 text-xl font-semibold">... Grab one fruit !</li>}
       </ul>
-      <p className="text-xl p-5 border-t border-slate-400">Total Price :</p>
+      <p className="text-xl p-5 border-t border-slate-400">
+        Total Price :{" "}
+        {fruityCart.cart.length > 0 && (
+          <span className="font-bold ml-2">
+            {fruityCart.cart.reduce((acc, item) => item.price * item.quantity + acc, 0)}$
+          </span>
+        )}
+      </p>
     </div>
   );
 }
