@@ -30,7 +30,7 @@ const initialState = [
       },
       {
         inputNumber: 4,
-        name: "Spread radius",
+        name: "Spread offset",
         value: -3,
         type: "range",
         minMax: [-250, 250],
@@ -79,7 +79,7 @@ export const shadowSlice = createSlice({
           },
           {
             inputNumber: 4,
-            name: "Spread radius",
+            name: "Spread offset",
             value: -3,
             type: "range",
             minMax: [-250, 250],
@@ -99,7 +99,11 @@ export const shadowSlice = createSlice({
 
       currentInput.value = action.payload.value;
     },
-    updateCheckbox: (state, action) => {},
+    updateCheckbox: (state, action) => {
+      const currentShadow = state.find((shadow) => shadow.id === action.payload.shadowID);
+
+      currentShadow[action.payload.name] = !currentShadow[action.payload.name];
+    },
   },
 });
 
