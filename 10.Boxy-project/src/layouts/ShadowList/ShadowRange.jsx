@@ -14,8 +14,8 @@ export default function ShadowRange({ inputData, shadowID }) {
     );
   }
   return (
-    <div className="my-8">
-      <div className="flex justify-between">
+    <div className="my-4">
+      <div className="flex justify-between items-baseline">
         <p>{inputData.name}</p>
         <div className="flex item-baseline mb-2">
           <input
