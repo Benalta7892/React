@@ -4,6 +4,7 @@ import fruits from "./features/fruits";
 import fruitsCart from "./features/fruitsCart";
 import logger from "redux-logger";
 import users from "./features/users";
+import chrono from "./features/Chrono";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     fruits,
     fruitsCart,
     users,
+    chrono,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
